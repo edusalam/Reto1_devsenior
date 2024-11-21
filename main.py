@@ -28,6 +28,9 @@ def generarInforme():
     #generar un informe resumido de los experimentos y sus estadisticas
     pass
 #muestra el menu principal del programa
+
+#prueba borrar###################
+
 #mejorar el menu 1
 #mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
 def mostrarMenu():
