@@ -1,4 +1,4 @@
-#print("hola")        INVESTIGAR LA MAQUETACION
+##print("hola")        INVESTIGAR LA MAQUETACION
 #estructurar para que haya un buen funcionamiento
 #visualizacin print consola
 #atributos
@@ -7,7 +7,7 @@ LISTADeExperimentos = [
     "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
 ]
 import datatime
-def agregarExperimento():
+def agregarExperimento(): 
     #funcion permite un nuevo experimento con sus atributos
     pass
 #permite eliminar un experimento,    
