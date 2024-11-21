@@ -8,7 +8,8 @@ LISTADeExperimentos = [
 ]
 import datatime
 def agregarExperimento():
-    '''funcion permite un nuevo experimento con sus atributos'''
+    #funcion permite un nuevo experimento con sus atributos
+    print("prueba github")
     pass
 #permite eliminar un experimento,    
 def eliminarExperimento():
