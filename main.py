@@ -3,15 +3,18 @@
 #visualizacin print consola
 #atributos
 #atributos de un experimento: nombre, fecha, tipo de resultados
-LISTADeExperimentos = [
-    "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
+import datetime
+
+listaDeExperimentos = [
+    ["experimento 1", "16/11/2024", "Quimica", [5,3,4,5,6,44]],
 ]
-import datatime
+
 def agregarExperimento():
-    '''funcion permite un nuevo experimento con sus atributos'''
+    #funcion permite un nuevo experimento con sus atributos
     pass
 #permite eliminar un experimento,    
 def eliminarExperimento():
+    
  pass
 def visualizarExperimento():
     #permite visualizar todos los experimentos, requiere el uso de la funcion agregarr experimento dificulatas 1 
@@ -30,6 +33,7 @@ def generarInforme():
 #muestra el menu principal del programa
 #mejorar el menu 1
 #mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
+
 def mostrarMenu():
     print("=========Menu Principal==0=======")
     print("=========Gestion de experimentos=========")
@@ -42,7 +46,6 @@ def mostrarMenu():
     print("=========informes=========")
     print("6.Generar informe")
     print("7. salir")
-    
         
     pass
 #funcion principal controla el flujo general del sistema
