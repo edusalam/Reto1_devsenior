@@ -3,26 +3,6 @@
 #visualizacin print consola
 #atributos
 #atributos de un experimento: nombre, fecha, tipo de resultados
-<<<<<<< HEAD
-import datetime
-
-listaDeExperimentos = [
-    ["experimento 1", "16/11/2024", "Quimica", [5,3,4,5,6,44]],
-]
-
-def agregarExperimento():
-    #funcion permite un nuevo experimento con sus atributos
-    pass
-#permite eliminar un experimento,    
-def eliminarExperimento():
-    
- pass
-def visualizarExperimento():
-    #permite visualizar todos los experimentos, requiere el uso de la funcion agregarr experimento dificulatas 1 
-    pass
- #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
-def calcularEstadistica():
-=======
 ListaExperimentos = [
     "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
 ]
@@ -71,7 +51,6 @@ def agregarExperimento(listaExperimentos):
 
 #permite eliminar un experimento,             xxxxxxxxxxxxxxxxx   
 def eliminarExperimento():
->>>>>>> 830430d23a15a5c9d7b97e942fec4a4d29ff3ebf
     pass
 
 
