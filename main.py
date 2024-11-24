@@ -89,6 +89,9 @@ def calcularEstadisticas(listaExperimentos):
         print(f"puntaje minimo de los resultados{minimo}")
 
 print("actualizaco 24 noviembre")
+print("prueba uno rama uno")
+
+
 
 
 def compararExperimento():             #xxxxxxxxxxxxxxxxxxxx
