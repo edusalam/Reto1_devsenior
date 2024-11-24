@@ -3,10 +3,6 @@
 #visualizacin print consola
 #atributos
 #atributos de un experimento: nombre, fecha, tipo de resultados
-<<<<<<< HEAD
-
-=======
->>>>>>> 66fb22c4d5dee4d18d2150bae35c9d3beeedf57d
 ListaExperimentos = [
     "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
 ]
@@ -55,10 +51,7 @@ def agregarExperimento(listaExperimentos):
 
 #permite eliminar un experimento,             xxxxxxxxxxxxxxxxx   
 def eliminarExperimento():
-<<<<<<< HEAD
 
-=======
->>>>>>> 66fb22c4d5dee4d18d2150bae35c9d3beeedf57d
     pass
 
 
