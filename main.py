@@ -35,7 +35,7 @@ def compararExperimento():
 def generarInforme():
     #generar un informe resumido de los experimentos y sus estadisticas
     pass
-
+print("prueba 24 noviembre")
 
 def mostrarMenu():
     #mejorar el menu 1
