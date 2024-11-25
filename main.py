@@ -14,9 +14,7 @@ class Experimento:
         self.fechaDeRealizacion = fechaDeRealizacion
         self.tipoExperimento = tipoExperimento
         self.resultadosExperimento = resultadosExperimento
-    
-
-## funcion agregar experimento 
+   ## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
     nombreExperimento = input('por favor ingrese el nombre del experimento: ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/mm/YYYY): ')
@@ -70,7 +68,7 @@ def visualizarExperimentos(listaExperimentos):
 #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 ## analisis de resultados
 def calcularEstadisticas(listaExperimentos):
-    visualizarExperimentos()
+    #1visualizarExperimentos()
     print("listado de experimentos")
     index = int(input("ingrese el numero del experimento: ")) 
     if(0 <= index < len(listaExperimentos)):
@@ -142,18 +140,17 @@ def generarInforme(listaExperimentos):
 def mostrarMenu():
     listaExperimentos = []
     while True:
-        print("=========Menu Principal==0=======")
-        print("=========Gestion de experimentos=========")
+        print("=========Menu Principal====Gestion de experimento=========\n")       
         print("1. agregarexperimento")
         print("2. visualizar expeimento")        
         print("3. eliminar expeimento")
-        print("4.calcular experimento")
-        print("=========Analisis de datos=========")
+        print("4.calcular experimento\n")
+        print("=========Analisis de datos=========\n")
         print("5.calcular estadisticas")
-        print("6.comparar experimentos")
-        print("=========informes=========")
+        print("6.comparar experimentos\n")
+        print("=========informes=========\n")
         print("7.Generar informe")
-        print("8. salir")
+        print("8. salir\n")
 
         opcion = int(input("seleccione una opcion: "))
 
@@ -174,21 +171,12 @@ def mostrarMenu():
             print("has salido del programas. ")
             break
         else:
-            print("opcion no valida. ")
-
-
-
-
-
-
-            
-
-
+            print("opcion no valida. ")           
 #funcion principal controla el flujo general del sistema
 #def main():    
 #conrola el flujo
 if __name__ == "__main__":
-    mostrarMenu()
+ mostrarMenu()
     
 
 
