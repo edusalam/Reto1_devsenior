@@ -9,7 +9,7 @@ import statistics
 class Experimento:
 
     #metodo constructor 
- def __init__(self, nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento):
+    def __init__(self, nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento):
         self.nombreExperimento = nombreExperimento
         self.fechaDeRealizacion = fechaDeRealizacion
         self.tipoExperimento = tipoExperimento
@@ -19,12 +19,13 @@ class Experimento:
 ## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
     nombreExperimento = input('por favor ingrese el nombre del experimento: ')
-    fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/mm/YYYY)')
+    fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/mm/YYYY): ')
     try:
         fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y ")
     except ValueError:
         print("fecha no valida.")
-        return
+        return 
+    
     
     tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')
     resultadosExperimento = input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):')
@@ -41,21 +42,23 @@ def agregarExperimento(listaExperimentos):
     print("Experimento agregado con exito...")
 
 #permite eliminar un experimento,             xxxxxxxxxxxxxxxxx   
-def eliminarExperimento():
+def eliminarExperimento(listaExperimentos):
     ListaExperimentos.remove(Experimento)
     print("se elimino correctamente el experimento")
     visualizarExperimentos(listaExperimentos)
 
-    pass
+    #pass
 
 ## funsion para ver todos los experimentos agregados
 def visualizarExperimentos(listaExperimentos):
     print("Lista de experimentos")
+    if not listaExperimentos:
+        print("no hay experimentos agregados")
+        return
+            
     for i, experimento in enumerate(listaExperimentos):
         print(f"{i}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} ")
-    #if not listaExperimentos:
-     #   print("no hay experimentos agregados")
-      #  return
+
     
     for i,experimento in enumerate(listaExperimentos, start=1):
         print(f"\nexperimento {i}")
@@ -81,8 +84,8 @@ def calcularEstadisticas(listaExperimentos):
         print(f"minimo: {minimo}")
 
     #if not listaExperimentos:
-     #   print("no hay experimentos agregados")
-      #  return  
+    #   print("no hay experimentos agregados")
+        #  return  
     
     # for experimento in listaExperimentos:
     #     promedio = statistics.mean(experimento.resultadosExperimento)
@@ -93,13 +96,13 @@ def calcularEstadisticas(listaExperimentos):
     #     print(f"puntaje maximo de los resultados{maximo} ")
     #     print(f"puntaje minimo de los resultados{minimo}")
 
-def compararExperimento():   
+def compararExperimento(listaExperimentos):   
     visualizarExperimentos()
     indices = list(map(int, input("ingrese los indices de los equipos que desesa comparar separados  por comas: ").split(","))) 
-                                  
+
     resultados_comparacion = []   
     for index in indices:
-         if(0 <= index < len(listaExperimentos)):
+        if(0 <= index < len(listaExperimentos)):
             promedio = sum(ListaExperimentos[index][3]) / len(ListaExperimentos[index][3])
             resultados_comparacion.append(promedio)
     else:
@@ -109,12 +112,11 @@ def compararExperimento():
     for index, promedio in resultados_comparacion:
         print(f"{index +1}.{ListaExperimentos[index][0]} - {promedio}") 
         
-                  
-      
+
 
     #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
     #parar comparar requiere de visualizar los experimentos
-    pass
+    #pass
 
 #generar un informe resumido de los experimentos y sus estadisticas
 def generarInforme(listaExperimentos):
@@ -138,21 +140,56 @@ def generarInforme(listaExperimentos):
 #mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
 
 def mostrarMenu():
-    print("=========Menu Principal==0=======")
-    print("=========Gestion de experimentos=========")
-    print("1. agregarexperimento")
-    print("2. visualizar expeimento")
-    print("3.calcular experimento")
-    print("=========Analisis de datos=========")
-    print("4.calcular estadisticas")
-    print("5.comparar experimentos")
-    print("=========informes=========")
-    print("6.Generar informe")
-    print("7. salir")
-        
-    pass
+    listaExperimentos = []
+    while True:
+        print("=========Menu Principal==0=======")
+        print("=========Gestion de experimentos=========")
+        print("1. agregarexperimento")
+        print("2. visualizar expeimento")        
+        print("3. eliminar expeimento")
+        print("4.calcular experimento")
+        print("=========Analisis de datos=========")
+        print("5.calcular estadisticas")
+        print("6.comparar experimentos")
+        print("=========informes=========")
+        print("7.Generar informe")
+        print("8. salir")
+
+        opcion = int(input("seleccione una opcion: "))
+
+        if opcion == 1:
+            agregarExperimento(listaExperimentos)
+        elif opcion == 2:
+            visualizarExperimentos(listaExperimentos)
+        elif opcion == 3:
+            eliminarExperimento(listaExperimentos)
+            print("seleccione el experimento que desea eliminar: ")
+        elif opcion == 4:
+            calcularEstadisticas(listaExperimentos)
+        elif opcion == 6:
+            compararExperimento(listaExperimentos)
+        elif opcion == 7:
+            generarInforme(listaExperimentos)
+        elif opcion == 8:
+            print("has salido del programas. ")
+            break
+        else:
+            print("opcion no valida. ")
+
+
+
+
+
+
+            
+
+
 #funcion principal controla el flujo general del sistema
-def main():
+#def main():    
 #conrola el flujo
-    pass
-main()
+if __name__ == "__main__":
+    mostrarMenu()
+    
+
+
+
