@@ -17,7 +17,7 @@ class Experimento:
    ## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
     nombreExperimento = input('por favor ingrese el nombre del experimento: ')
-    fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/mm/YYYY): ')
+    fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
         fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y ")
     except ValueError:
