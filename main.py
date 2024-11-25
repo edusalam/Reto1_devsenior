@@ -153,17 +153,16 @@ def generarInforme(listaExperimentos):
 def mostrarMenu():
     listaExperimentos = []
     while True:
-        print("=========Menu Principal====Gestion de experimento=========\n")       
+        print("=========Menu Principal====Gestion de experimento=========")       
         print("1. agregarexperimento")
         print("2. visualizar expeimento")        
-        print("3. eliminar expeimento")
-        print("4.calcular experimento\n")
-        print("=========Analisis de datos=========\n")
-        print("5.calcular estadisticas")
-        print("6.comparar experimentos\n")
-        print("=========informes=========\n")
-        print("7.Generar informe")
-        print("8. salir\n")
+        print("3. eliminar expeimento")        
+        print("=========Analisis de datos=========")
+        print("4.calcular estadisticas")
+        print("5.comparar experimentos\n")
+        print("=========informes=========")
+        print("6.Generar informe")
+        print("7. salir\n")
 
         opcion = int(input("seleccione una opcion: "))
 
@@ -176,11 +175,11 @@ def mostrarMenu():
             print("seleccione el experimento que desea eliminar: ")
         elif opcion == 4:
             calcularEstadisticas(listaExperimentos)
-        elif opcion == 6:
+        elif opcion == 5:
             compararExperimento(listaExperimentos)
-        elif opcion == 7:
+        elif opcion == 6:
             generarInforme(listaExperimentos)
-        elif opcion == 8:
+        elif opcion == 7:
             print("has salido del programas. ")
             break
         else:
