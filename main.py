@@ -67,7 +67,7 @@ def visualizarExperimentos(listaExperimentos):
 #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 ## analisis de resultados
 def calcularEstadisticas(listaExperimentos):
-    visualizarExperimentos():
+    visualizarExperimentos()
     print("listado de experimentos")
     index = int(input("ingrese el numero del experimento: ")) 
     if(0 <= index < len(listaExperimentos)):
