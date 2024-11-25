@@ -44,19 +44,13 @@ def agregarExperimento(listaExperimentos):
     listaExperimentos.append(experimento)
     print("Experimento agregado con exito...")
 
-
-
-
-
-
 #permite eliminar un experimento,             xxxxxxxxxxxxxxxxx   
 def eliminarExperimento():
+    ListaExperimentos.remove(Experimento)
+    print("se elimino correctamente el experimento")
+    visualizarExperimentos(listaExperimentos)
 
     pass
-
-
-
-
 
 ## funsion para ver todos los experimentos agregados
 def visualizarExperimentos(listaExperimentos):
@@ -92,14 +86,9 @@ print("actualizaco 24 noviembre")
 print("prueba uno rama uno")
 
 
-
-
 def compararExperimento():             #xxxxxxxxxxxxxxxxxxxx
     #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
     pass
-
-
-
 
 #generar un informe resumido de los experimentos y sus estadisticas
 def generarInforme(listaExperimentos):
@@ -116,8 +105,6 @@ def generarInforme(listaExperimentos):
             archivo.write("\n")
 
     print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt'")            
-
-
 
 
 #muestra el menu principal del programa
