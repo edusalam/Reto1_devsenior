@@ -16,7 +16,8 @@ class Experimento:
         self.fechaDeRealizacion = fechaDeRealizacion
         self.tipoExperimento = tipoExperimento
         self.resultadosExperimento = resultadosExperimento
-   ## funcion agregar experimento 
+
+## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
     nombreExperimento = input('\npor favor ingrese el nombre del experimento:  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
@@ -43,6 +44,10 @@ def agregarExperimento(listaExperimentos):
 
 #permite eliminar un experimento,             xxxxxxxxxxxxxxxxx   
 def eliminarExperimento(listaExperimentos):
+    if not listaExperimentos:
+        print("no hay experimentos agregados")
+        return
+
     ListaExperimentos.remove(Experimento)
     print("se elimino correctamente el experimento")
     visualizarExperimentos(listaExperimentos)
@@ -70,6 +75,10 @@ def visualizarExperimentos(listaExperimentos):
 #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 ## analisis de resultados
 def calcularEstadisticas(listaExperimentos):
+    if not listaExperimentos:
+        print("no hay experimentos agregados")
+        return
+        
     #1visualizarExperimentos()
     print("listado de experimentos")
     index = int(input("ingrese el numero del experimento: ")) 
@@ -96,7 +105,11 @@ def calcularEstadisticas(listaExperimentos):
     #     print(f"puntaje maximo de los resultados{maximo} ")
     #     print(f"puntaje minimo de los resultados{minimo}")
 
-def compararExperimento(listaExperimentos):   
+def compararExperimento(listaExperimentos):
+    if not listaExperimentos:
+        print("no hay experimentos agregados")
+        return
+
     visualizarExperimentos()
     indices = list(map(int, input("ingrese los indices de los equipos que desesa comparar separados  por comas: ").split(","))) 
 
@@ -176,9 +189,14 @@ def mostrarMenu():
 #funcion principal controla el flujo general del sistema
 #def main():    
 #conrola el flujo
+<<<<<<< HEAD
 #if __name__ == "__main__":
  #mostrarMenu()
 mostrarMenu()
+=======
+if __name__ == "__main__":
+    mostrarMenu()
+>>>>>>> 9c6eefaf45769468decfddb2e2bc73dcb20d494a
     
 
 
