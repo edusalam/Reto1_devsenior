@@ -18,7 +18,7 @@ class Experimento:
         self.resultadosExperimento = resultadosExperimento
 
 ## funcion agregar experimento 
-def agregarExperimento(listaExperimentos):
+def agregarExperimento(listaExperimentos, count):
     nombreExperimento = input('\npor favor ingrese el nombre del experimento:  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
@@ -189,14 +189,12 @@ def mostrarMenu():
 #funcion principal controla el flujo general del sistema
 #def main():    
 #conrola el flujo
-<<<<<<< HEAD
-#if __name__ == "__main__":
- #mostrarMenu()
-mostrarMenu()
-=======
+
 if __name__ == "__main__":
-    mostrarMenu()
->>>>>>> 9c6eefaf45769468decfddb2e2bc73dcb20d494a
+ mostrarMenu()
+
+
+
     
 
 
