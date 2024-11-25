@@ -1,6 +1,8 @@
 
 ListaExperimentos = [
     "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
+    "experimento 2", "24/11/2024", "fisica", [8,9,4,6,7],
+    "experimento 3", "25/11/2024", "biologia", [8,9,4,6,7],
 ]
 
 from datetime import datetime
@@ -16,12 +18,12 @@ class Experimento:
         self.resultadosExperimento = resultadosExperimento
    ## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
-    nombreExperimento = input('por favor ingrese el nombre del experimento: ')
+    nombreExperimento = input('\npor favor ingrese el nombre del experimento:  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
         fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y ")
-    except ValueError:
-        print("fecha no valida.")
+    except Exception as ex:
+        print(f"fecha no valida:  {ex}")
         return 
     
     
@@ -49,10 +51,10 @@ def eliminarExperimento(listaExperimentos):
 
 ## funsion para ver todos los experimentos agregados
 def visualizarExperimentos(listaExperimentos):
-    print("Lista de experimentos")
-    if not listaExperimentos:
-        print("no hay experimentos agregados")
-        return
+    # print("Lista de experimentos")
+    # if not listaExperimentos:
+    #     print("no hay experimentos agregados")
+    #     return
             
     for i, experimento in enumerate(listaExperimentos):
         print(f"{i}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} ")
@@ -140,17 +142,16 @@ def generarInforme(listaExperimentos):
 def mostrarMenu():
     listaExperimentos = []
     while True:
-        print("=========Menu Principal====Gestion de experimento=========\n")       
+        print("=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====")       
         print("1. agregarexperimento")
         print("2. visualizar expeimento")        
-        print("3. eliminar expeimento")
-        print("4.calcular experimento\n")
-        print("=========Analisis de datos=========\n")
-        print("5.calcular estadisticas")
-        print("6.comparar experimentos\n")
-        print("=========informes=========\n")
-        print("7.Generar informe")
-        print("8. salir\n")
+        print("3. eliminar expeimento")        
+        print("=========Analisis de datos=========")
+        print("4.calcular estadisticas")
+        print("5.comparar experimentos\n")
+        print("=========informes=========")
+        print("6.Generar informe")
+        print("7. salir\n\n")
 
         opcion = int(input("seleccione una opcion: "))
 
@@ -163,20 +164,21 @@ def mostrarMenu():
             print("seleccione el experimento que desea eliminar: ")
         elif opcion == 4:
             calcularEstadisticas(listaExperimentos)
-        elif opcion == 6:
+        elif opcion == 5:
             compararExperimento(listaExperimentos)
-        elif opcion == 7:
+        elif opcion == 6:
             generarInforme(listaExperimentos)
-        elif opcion == 8:
+        elif opcion == 7:
             print("has salido del programas. ")
             break
         else:
-            print("opcion no valida. ")           
+            print("\n¡Opción no valida!. \n ")           
 #funcion principal controla el flujo general del sistema
 #def main():    
 #conrola el flujo
-if __name__ == "__main__":
- mostrarMenu()
+#if __name__ == "__main__":
+ #mostrarMenu()
+mostrarMenu()
     
 
 
