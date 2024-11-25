@@ -84,14 +84,14 @@ def calcularEstadisticas(listaExperimentos):
      #   print("no hay experimentos agregados")
       #  return  
     
-    for experimento in listaExperimentos:
-        promedio = statistics.mean(experimento.resultadosExperimento)
-        maximo = max(experimento.resultadosExperimento)
-        minimo = min(experimento.resultadosExperimentos)
-        print(f'\nestadisticas de {experimento.nombreExperimento}')
-        print(f"promedio de los resultados: {promedio}")
-        print(f"puntaje maximo de los resultados{maximo} ")
-        print(f"puntaje minimo de los resultados{minimo}")
+    # for experimento in listaExperimentos:
+    #     promedio = statistics.mean(experimento.resultadosExperimento)
+    #     maximo = max(experimento.resultadosExperimento)
+    #     minimo = min(experimento.resultadosExperimentos)
+    #     print(f'\nestadisticas de {experimento.nombreExperimento}')
+    #     print(f"promedio de los resultados: {promedio}")
+    #     print(f"puntaje maximo de los resultados{maximo} ")
+    #     print(f"puntaje minimo de los resultados{minimo}")
 
 def compararExperimento():   
     visualizarExperimentos()
