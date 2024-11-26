@@ -171,7 +171,7 @@ def mostrarMenu():
         print("=========informes=========")
         print("6.Generar informe")
         print("7. salir\n")  #actualizacon 26/11/2024
-
+    ##prueba
         opcion = int(input("seleccione una opcion: "))
 
         if opcion == 1:
