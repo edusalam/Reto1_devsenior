@@ -18,7 +18,7 @@ class Experimento:
         self.resultadosExperimento = resultadosExperimento
 
 ## funcion agregar experimento 
-def agregarExperimento(listaExperimentos, count):
+def agregarExperimento(listaExperimentos):
     nombreExperimento = input('\npor favor ingrese el nombre del experimento:  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
