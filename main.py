@@ -1,13 +1,5 @@
 
-ListaExperimentos = [
-<<<<<<< HEAD
-    "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
-    "experimento 2", "24/11/2024", "fisica", [8,9,4,6,7],
-    "experimento 3", "25/11/2024", "biologia", [8,9,4,6,7],
-=======
-    ["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],
->>>>>>> d59199a1e1f7dbf9d90e1438379f9db103c2c7d3
-]
+ListaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],]
 
 from datetime import datetime
 import statistics
@@ -26,17 +18,17 @@ def agregarExperimento(listaExperimentos):
     nombreExperimento = input('\npor favor ingrese el nombre del experimento:  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
-<<<<<<< HEAD
-        fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y ")
+
+        fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y")
     except Exception as ex:
         print(f"fecha no valida:  {ex}")
         return 
-=======
+
         fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y")
     except ValueError:
         print("fecha no valida.")
         return     
->>>>>>> d59199a1e1f7dbf9d90e1438379f9db103c2c7d3
+
     
     tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')   
 
@@ -153,11 +145,10 @@ def generarInforme(listaExperimentos):
 def mostrarMenu():
    
     while True:
-<<<<<<< HEAD
         print("=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====")       
-=======
+
         print("=========Menu Principal====Gestion de experimento=========")       
->>>>>>> d59199a1e1f7dbf9d90e1438379f9db103c2c7d3
+
         print("1. agregarexperimento")
         print("2. visualizar expeimento")        
         print("3. eliminar expeimento")        
@@ -166,11 +157,11 @@ def mostrarMenu():
         print("5.comparar experimentos\n")
         print("=========informes=========")
         print("6.Generar informe")
-<<<<<<< HEAD
+
         print("7. salir\n\n")
-=======
+
         print("7. salir\n")
->>>>>>> d59199a1e1f7dbf9d90e1438379f9db103c2c7d3
+
 
         opcion = int(input("seleccione una opcion: "))
 
@@ -182,19 +173,19 @@ def mostrarMenu():
             eliminarExperimento(ListaExperimentos)
             print("seleccione el experimento que desea eliminar: ")
         elif opcion == 4:
-<<<<<<< HEAD
-            calcularEstadisticas(listaExperimentos)
-        elif opcion == 5:
-            compararExperimento(listaExperimentos)
-        elif opcion == 6:
-            generarInforme(listaExperimentos)
-=======
+
             calcularEstadisticas(ListaExperimentos)
         elif opcion == 5:
             compararExperimento(ListaExperimentos)
         elif opcion == 6:
             generarInforme(ListaExperimentos)
->>>>>>> d59199a1e1f7dbf9d90e1438379f9db103c2c7d3
+
+            calcularEstadisticas(ListaExperimentos)
+        elif opcion == 5:
+            compararExperimento(ListaExperimentos)
+        elif opcion == 6:
+            generarInforme(ListaExperimentos)
+
         elif opcion == 7:
             print("has salido del programas. ")
             break
