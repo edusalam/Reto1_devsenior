@@ -1,7 +1,5 @@
 
-LISTADeExperimentos = [
-    "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],
-import datatime
+LISTADeExperimentos = ["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],
 def agregarExperimento():
     #funcion permite un nuevo experimento con sus atributos
     print("prueba github")
