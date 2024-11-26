@@ -172,11 +172,7 @@ def mostrarMenu():
         print("5.comparar experimentos\n")
         print("=========informes=========")
         print("6.Generar informe")
-
-        print("7. salir\n\n")
-
-        print("7. salir\n")
-
+        print("7. salir\n\n")  
 
         opcion = int(input("seleccione una opcion: "))
 
