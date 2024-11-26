@@ -96,7 +96,7 @@ def compararExperimento(listaExperimentos):
         return
 
     visualizarExperimentos()
-    indices = list(map(int, input("ingrese los indices de los equipos que desesa comparar separados  por comas: ").split(","))) 
+    indices = list(map(int, input("ingrese los indices de los experimentos que desesa comparar separados  por comas: ").split(","))) 
 
     resultados_comparacion = []   
     for index in indices:
@@ -130,7 +130,7 @@ def generarInforme(listaExperimentos):
             archivo.write(f"resultados del experimento: {experimento.resultadoExperimento}\n")
             archivo.write("\n")
 
-    print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt'")            
+    print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt")            
 
 
 #muestra el menu principal del programa
