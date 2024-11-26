@@ -1,5 +1,8 @@
 
-LISTADeExperimentos = ["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],
+from datetime import datetime
+import statistics
+
+ListaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],]
 def agregarExperimento():
     #funcion permite un nuevo experimento con sus atributos
     print("prueba github")
@@ -13,12 +16,6 @@ def visualizarExperimento():
  #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 def calcularEstadistica():
     pass
-
-ListaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],]
-
-from datetime import datetime
-import statistics
-
 class Experimento:
 
     #metodo constructor 
@@ -42,11 +39,8 @@ def agregarExperimento(listaExperimentos):
         fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y")
     except ValueError:
         print("fecha no valida.")
-        return     
-
-    
-    tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')   
-
+        return  
+    tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')  
     resultadosExperimento = list(map(int,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))              
       
 ## creacion de un objeto para almacenar la informacion no 
@@ -96,19 +90,6 @@ def calcularEstadisticas(listaExperimentos):
         print(f"promedio: {promedio}")
         print(f"maximo: {maximo}")
         print(f"minimo: {minimo}")
-
-    #if not listaExperimentos:
-    #   print("no hay experimentos agregados")
-        #  return  
-    
-    # for experimento in listaExperimentos:
-    #     promedio = statistics.mean(experimento.resultadosExperimento)
-    #     maximo = max(experimento.resultadosExperimento)
-    #     minimo = min(experimento.resultadosExperimentos)
-    #     print(f'\nestadisticas de {experimento.nombreExperimento}')
-    #     print(f"promedio de los resultados: {promedio}")
-    #     print(f"puntaje maximo de los resultados{maximo} ")
-    #     print(f"puntaje minimo de los resultados{minimo}")
 
 def compararExperimento(listaExperimentos):
     if not listaExperimentos:
