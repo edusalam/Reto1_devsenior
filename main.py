@@ -1,6 +1,6 @@
 
 ListaExperimentos = [
-    "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
+    ["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],
 ]
 
 from datetime import datetime
@@ -20,24 +20,22 @@ def agregarExperimento(listaExperimentos):
     nombreExperimento = input('por favor ingrese el nombre del experimento: ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
-        fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y ")
+        fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y")
     except ValueError:
         print("fecha no valida.")
         return 
     
     
     tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')
-    resultadosExperimento = input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):')
-
-    try:
-        resultadosExperimento(list(map(float, resultadosExperimento.split(","))))
-    except ValueError:
-        print("datos no validos...")
-        return
     
-## creacion de un objeto para almacenar la informacion
-    experimento = Experimento(nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento)
-    listaExperimentos.append(experimento)
+
+    
+    resultadosExperimento = list(map(int,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))              
+  
+    
+## creacion de un objeto para almacenar la informacion no 
+   #experimento = Experimento([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
+    listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     print("Experimento agregado con exito...")
 
 #permite eliminar un experimento,             xxxxxxxxxxxxxxxxx   
@@ -62,13 +60,6 @@ def visualizarExperimentos(listaExperimentos):
     for i, experimento in enumerate(listaExperimentos):
         print(f"{i}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} ")
 
-    
-    for i,experimento in enumerate(listaExperimentos, start=1):
-        print(f"\nexperimento {i}")
-        print(f"nombre: {experimento.nombreExperimento}")
-        print(f"fecha limite: {experimento.fechaDeRealizacion.strftime('%d, %m, %Y')}")
-        print(f"categoria: {experimento.tipoExperimento}")
-        print(f"horas dedicadas: {experimento.resultadosExperimento}")
         
 #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 ## analisis de resultados
@@ -151,7 +142,7 @@ def generarInforme(listaExperimentos):
 #mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
 
 def mostrarMenu():
-    listaExperimentos = []
+   
     while True:
         print("=========Menu Principal====Gestion de experimento=========")       
         print("1. agregarexperimento")
@@ -167,18 +158,18 @@ def mostrarMenu():
         opcion = int(input("seleccione una opcion: "))
 
         if opcion == 1:
-            agregarExperimento(listaExperimentos)
+            agregarExperimento(ListaExperimentos)
         elif opcion == 2:
-            visualizarExperimentos(listaExperimentos)
+            visualizarExperimentos(ListaExperimentos)
         elif opcion == 3:
-            eliminarExperimento(listaExperimentos)
+            eliminarExperimento(ListaExperimentos)
             print("seleccione el experimento que desea eliminar: ")
         elif opcion == 4:
-            calcularEstadisticas(listaExperimentos)
+            calcularEstadisticas(ListaExperimentos)
         elif opcion == 5:
-            compararExperimento(listaExperimentos)
+            compararExperimento(ListaExperimentos)
         elif opcion == 6:
-            generarInforme(listaExperimentos)
+            generarInforme(ListaExperimentos)
         elif opcion == 7:
             print("has salido del programas. ")
             break
