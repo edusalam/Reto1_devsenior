@@ -1,19 +1,6 @@
-<<<<<<< Updated upstream
-=======
-#print("hola")        INVESTIGAR LA MAQUETACION
-#estructurar para que haya un buen funcionamiento
-#visualizacin print consola
-#atributos
-#atributos de un experimento: nombre, fecha, tipo de resultados
-LISTADeExperimentos = [
-    "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
 
-   ´´´ 
-   una prueba de actualizacion de ramas
-    otra prueba de actualizacion de ramas
-    mas pruebas de actualizacind e
-    ´´´
-]
+LISTADeExperimentos = [
+    "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],
 import datatime
 def agregarExperimento():
     #funcion permite un nuevo experimento con sus atributos
@@ -28,7 +15,6 @@ def visualizarExperimento():
  #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 def calcularEstadistica():
     pass
->>>>>>> Stashed changes
 
 ListaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],]
 
