@@ -160,10 +160,8 @@ def generarInforme(listaExperimentos):
 def mostrarMenu():
    
     while True:
-        print("=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====")       
-
+        print("=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====")     
         print("=========Menu Principal====Gestion de experimento=========")       
-
         print("1. agregarexperimento")
         print("2. visualizar expeimento")        
         print("3. eliminar expeimento")        
@@ -172,7 +170,7 @@ def mostrarMenu():
         print("5.comparar experimentos\n")
         print("=========informes=========")
         print("6.Generar informe")
-        print("7. salir\n\n")  
+        print("7. salir\n")  #actualizacon 26/11/2024
 
         opcion = int(input("seleccione una opcion: "))
 
