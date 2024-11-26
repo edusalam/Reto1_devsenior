@@ -23,16 +23,12 @@ def agregarExperimento(listaExperimentos):
         fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y")
     except ValueError:
         print("fecha no valida.")
-        return 
+        return     
     
-    
-    tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')
-    
+    tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')   
 
-    
     resultadosExperimento = list(map(int,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))              
-  
-    
+      
 ## creacion de un objeto para almacenar la informacion no 
    #experimento = Experimento([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
