@@ -91,7 +91,7 @@ def calcularEstadisticas(listaExperimentos):
         resultados = listaExperimentos[index][3]
         promedio = sum(resultados)/len(resultados)
         maximo = max(resultados)
-        minimo = (resultados)
+        minimo = min(resultados)
         print(f"estadisticas del experimento {listaExperimentos[index][0]}")
         print(f"promedio: {promedio}")
         print(f"maximo: {maximo}")
