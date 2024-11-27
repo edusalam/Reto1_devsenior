@@ -19,6 +19,9 @@ listaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],
 #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 #def calcularEstadistica():
 #    pass
+
+
+
 class Experimento:
 
     #metodo constructor 
@@ -111,14 +114,13 @@ def compararExperimento(listaExperimentos):
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return
-
     visualizarExperimentos()
     indices = list(map(int, input("ingrese los indices de los experimentos que desesa comparar separados  por comas: ").split(","))) 
 
     resultados_comparacion = []   
     for index in indices:
         if(0 <= index < len(listaExperimentos)):
-            promedio = sum(listaExperimentos[index][3]) / len(listaExperimentos[index][3])
+            promedio = sum(resultados_comparacion[index][3]) / len(resultados_comparacion[index][3])
             resultados_comparacion.append(promedio)
     else:
         print(f"indice {index} invalido")
