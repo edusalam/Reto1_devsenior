@@ -29,24 +29,26 @@ def agregarExperimento(listaExperimentos):
     resultadosExperimento = list(map(float,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))              
     #experimento = Experimento([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
-    print("Experimento agregado con exito...")
+    print("\x1b[1;32m"+"Experimento agregado con exito....")
+    print() 
 
 def visualizarExperimentos(listaExperimentos):
     ## funsion para ver todos los experimentos agregados
-    print("Lista de experimentos")
+    print("\x1b[1;35m"+"Lista de experimento")
+    print("\x1b[1;37m") 
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return            
     for i, experimento in enumerate(listaExperimentos):
-        print(f"{i + 1}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} ")
+        print(f"{i + 1}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} \n")
 
 def eliminarExperimento(listaExperimentos):
     #permite eliminar un experimento
     if not listaExperimentos:
-        print("no hay experimentos agregados")
+        print("\x1b[1;31m"+"No hay experimentos agregados") 
         return    
     print(visualizarExperimentos(listaExperimentos))        
-    indiceExperimento = int(input("digite el numero del experimento que desea eliminar: ")) - 1
+    indiceExperimento = int(input("\x1b[1;34m"+"Digite el numero del experimento que desea eliminar: ")) - 1
     if 0 <= indiceExperimento < len(listaExperimentos):
         try:                        
             listaExperimentos.pop(indiceExperimento) 
@@ -59,7 +61,7 @@ def calcularEstadisticas(listaExperimentos):
     #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
     # analisis de resultados
     if not listaExperimentos:
-        print("no hay experimentos agregados")
+        print("\x1b[1;31m"+"No hay experimentos agregados") 
         return
     print(visualizarExperimentos(listaExperimentos))    
     print("digite 0 para volver al menu..")
@@ -104,7 +106,7 @@ def compararExperimento(listaExperimentos):
 
 def generarInforme(listaExperimentos):
     if not listaExperimentos:
-        print("no hay experimentos agregados")
+        print("\x1b[1;31m"+"No hay experimentos agregados") 
         return
     with open('informe_resultados_experimento.txt','w') as archivo:
         for experimento in listaExperimentos:
@@ -120,19 +122,20 @@ def mostrarMenu():
     #mejorar el menu 1
     #mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
     while True:
-        print("=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====")     
-        print("=========Menu Principal====Gestion de experimento=========")       
-        print("1. agregarexperimento")
-        print("2. visualizar expeimento")        
-        print("3. eliminar expeimento")        
-        print("=========Analisis de datos=========")
-        print("4.calcular estadisticas")
-        print("5.comparar experimentos\n")
-        print("=========informes=========")
-        print("6.Generar informe")
-        print("7. salir\n")  #actualizacon 26/11/2024
-    ##prueba
-        opcion = int(input("seleccione una opcion: "))
+        print("\x1b[1;35m"+"=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====") 
+        print("\x1b[1;35m"+"1."+ "\x1b[1;37m "+"Agregar experimento")  
+        print("\x1b[1;35m"+"2."+ "\x1b[1;37m "+"Visualizar experimento") 
+        print("\x1b[1;35m"+"3."+ "\x1b[1;37m "+"Eliminar experimento") 
+        print("\x1b[1;35m"+"    ===   ===Analisis de datos===   ===   ") 
+        print("\x1b[1;35m"+"4."+ "\x1b[1;37m "+"Calcular estadisticas")
+        print("\x1b[1;35m"+"5."+ "\x1b[1;37m "+"Comparar experimento") 
+        print("\x1b[1;35m"+"== == == Informes == == ==")
+        print("\x1b[1;35m"+"6."+ "\x1b[1;37m "+"Generar informe") 
+        print("\x1b[1;35m"+"7."+ "\x1b[1;37m "+"Salir")  
+
+        opcion = int(input("\x1b[1;34m"+"Seleccione un opcion:"))
+         
+        print()
         if opcion == 1:
             agregarExperimento(listaExperimentos)
         elif opcion == 2:
@@ -151,11 +154,11 @@ def mostrarMenu():
         elif opcion == 6:
             generarInforme(listaExperimentos)
         elif opcion == 7:
-            print("has salido del programas. ")
+            print("\x1b[1;31m"+"Has salido del programa") 
             break
         else:
             print("\n¡Opción no valida!. \n ")   
-                  
+            
 if __name__ == "__main__":
     mostrarMenu()
 
