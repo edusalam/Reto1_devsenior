@@ -3,24 +3,6 @@ from datetime import datetime
 import statistics
 
 listaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],]
-#def agregarExperimento():
-    #funcion permite un nuevo experimento con sus atributos
- #   print("prueba github")
-  #  pass
-#permite eliminar un experimento,    
-#def eliminarExperimento():
- #   print("por favor digite el numero del experimento que desea eliminar: ")
-
-
- #   pass
-#def visualizarExperimento():
-    #permite visualizar todos los experimentos, requiere el uso de la funcion agregarr experimento dificulatas 1 
-#    pass
-#calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
-#def calcularEstadistica():
-#    pass
-
-
 
 class Experimento:
 
@@ -33,7 +15,7 @@ class Experimento:
 
 ## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
-    nombreExperimento = input('\npor favor ingrese el nombre del experimento:  ')
+    nombreExperimento = input('\npor favor ingrese el nombre del experimento (Qumica, fisica o biologia):  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
 
