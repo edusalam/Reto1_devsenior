@@ -13,8 +13,8 @@ class Experimento:
         self.tipoExperimento = tipoExperimento
         self.resultadosExperimento = resultadosExperimento
 
-## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
+    # funcion agregar experimento 
     nombreExperimento = input('\npor favor ingrese el nombre del experimento :  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
@@ -44,10 +44,8 @@ def eliminarExperimento(listaExperimentos):
     #permite eliminar un experimento
     if not listaExperimentos:
         print("no hay experimentos agregados")
-        return
-    
-    print(visualizarExperimentos(listaExperimentos))
-        
+        return    
+    print(visualizarExperimentos(listaExperimentos))        
     indiceExperimento = int(input("digite el numero del experimento que desea eliminar: ")) - 1
     if 0 <= indiceExperimento < len(listaExperimentos):
         try:                        
@@ -105,7 +103,6 @@ def compararExperimento(listaExperimentos):
     pass
 
 def generarInforme(listaExperimentos):
-
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return
@@ -117,7 +114,6 @@ def generarInforme(listaExperimentos):
             archivo.write(f"resultados del experimento: {experimento[3]}\n")
             archivo.write("\n")
     print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt")            
-
 
 def mostrarMenu():
     #muestra el menu principal del programa
