@@ -3,16 +3,7 @@ from datetime import datetime
 import statistics
 
 ListaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],]
-def agregarExperimento():
-    #funcion permite un nuevo experimento con sus atributos
-    print("prueba github")
-    pass
-#permite eliminar un experimento,    
-def eliminarExperimento():
- pass
-def visualizarExperimento():
-    #permite visualizar todos los experimentos, requiere el uso de la funcion agregarr experimento dificulatas 1 
-    pass
+
  #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 def calcularEstadistica():
     pass
@@ -95,14 +86,13 @@ def compararExperimento(listaExperimentos):
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return
-
     visualizarExperimentos()
     indices = list(map(int, input("ingrese los indices de los experimentos que desesa comparar separados  por comas: ").split(","))) 
 
     resultados_comparacion = []   
     for index in indices:
         if(0 <= index < len(listaExperimentos)):
-            promedio = sum(ListaExperimentos[index][3]) / len(ListaExperimentos[index][3])
+            promedio = sum(resultados_comparacion[index][3]) / len(resultados_comparacion[index][3])
             resultados_comparacion.append(promedio)
     else:
         print(f"indice {index} invalido")
