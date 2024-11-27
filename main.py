@@ -15,7 +15,7 @@ class Experimento:
 
 ## funcion agregar experimento 
 def agregarExperimento(listaExperimentos):
-    nombreExperimento = input('\npor favor ingrese el nombre del experimento (Qumica, fisica o biologia):  ')
+    nombreExperimento = input('\npor favor ingrese el nombre del experimento :  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
 
@@ -27,7 +27,7 @@ def agregarExperimento(listaExperimentos):
     except ValueError:
         print("fecha no valida.")
         return  
-    tipoExperimento = input('ingrese el tipo de experimento que desea agregar: ')  
+    tipoExperimento = input('ingrese el tipo de experimento que desea agregar(Qumica, fisica o biologia): ')  
     resultadosExperimento = list(map(int,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))              
     
 
