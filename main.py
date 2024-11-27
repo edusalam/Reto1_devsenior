@@ -18,39 +18,30 @@ def agregarExperimento(listaExperimentos):
     nombreExperimento = input('\npor favor ingrese el nombre del experimento :  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
-
         fechaDeRealizacion = datetime.strptime(fechaDeRealizacion, "%d/%m/%Y")
     except Exception as ex:
         print(f"fecha no valida:  {ex}")
         return 
-
     except ValueError:
         print("fecha no valida.")
         return  
     tipoExperimento = input('ingrese el tipo de experimento que desea agregar(Qumica, fisica o biologia): ')  
     resultadosExperimento = list(map(float,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))              
-    
-
-#experimento = Experimento([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
+    #experimento = Experimento([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     print("Experimento agregado con exito...")
 
-
-
-## funsion para ver todos los experimentos agregados
 def visualizarExperimentos(listaExperimentos):
+    ## funsion para ver todos los experimentos agregados
     print("Lista de experimentos")
     if not listaExperimentos:
         print("no hay experimentos agregados")
-        return
-            
+        return            
     for i, experimento in enumerate(listaExperimentos):
         print(f"{i + 1}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} ")
 
-
-
-#permite eliminar un experimento,              
 def eliminarExperimento(listaExperimentos):
+    #permite eliminar un experimento
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return
@@ -62,18 +53,16 @@ def eliminarExperimento(listaExperimentos):
         try:                        
             listaExperimentos.pop(indiceExperimento) 
             print(visualizarExperimentos(listaExperimentos))
-
         except ValueError:
             print("no existe experimento")
-            return    
-         
-#calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
-## analisis de resultados
+            return          
+
 def calcularEstadisticas(listaExperimentos):
+    #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
+    # analisis de resultados
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return
-
     print(visualizarExperimentos(listaExperimentos))    
     print("digite 0 para volver al menu..")
     index = int(input("ingrese el numero del experimento: ")) - 1
@@ -86,16 +75,20 @@ def calcularEstadisticas(listaExperimentos):
         print(f"promedio: {promedio}")
         print(f"maximo: {maximo}")
         print(f"minimo: {minimo}")
-        
     elif index + 1 == 0:
         print("gracias..")
         mostrarMenu()
     else:
         print("obcion invalida..")    
- #if not listaExperimentos:
+
+
+def compararExperimento(listaExperimentos):
+     #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
+    #parar comparar requiere de visualizar los experimentos
+    #pass
+     #if not listaExperimentos:
      #    print("no hay experimentos agregados")
     #return   
-def compararExperimento(listaExperimentos):
     visualizarExperimentos(listaExperimentos)
     indices = list(map(int, input("ingrese los indices de los experimentos que desesa comparar separados  por comas: ").split(",")))
     resultados_comparacion = []
@@ -108,55 +101,14 @@ def compararExperimento(listaExperimentos):
         resultados_comparacion.sort(key=lambda x: x[1])
         print("resultados comparados")
     for index, promedio in resultados_comparacion:
-          print(f"{index +1}.{listaExperimentos[index][0]} - {promedio}")   
- 
- 
+        print(f"{index +1}.{listaExperimentos[index][0]} - {promedio}")   
+    pass
 
-    
-
-
-    
-
-        
-
-
-    #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
-    #parar comparar requiere de visualizar los experimentos
-    #pass
-
-#generar un informe resumido de los experimentos y sus estadisticas
-
-
-pass
-
-    ##visualizarExperimentos()
-
-    #resultados_comparacion = []  
-    #indices = list(map(int, input("ingrese los indices de los experimentos que desesa comparar separados  por comas: ").split(","))) 
-
-    #for index in indices:
-    #    if(0 <= index < len(listaExperimentos)):
-    #        promedio = sum(resultados_comparacion[index][3]) / len(resultados_comparacion[index][3])
-    #        resultados_comparacion.append(promedio)
-    #else:
-    #    print(f"indice {index} invalido")
-    #resultados_comparacion.sort(key=lambda x: x[1])
-    #print("resultados comparados")
-    #for index, promedio in resultados_comparacion:
-    #    print(f"{index +1}.{listaExperimentos[index][0]} - {promedio}") 
-        
-
-    #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
-    #parar comparar requiere de visualizar los experimentos
-    #pass
-
-#generar un informe resumido de los experimentos y sus estadisticas
 def generarInforme(listaExperimentos):
 
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return
-
     with open('informe_resultados_experimento.txt','w') as archivo:
         for experimento in listaExperimentos:
             archivo.write(f"Nombre: {experimento[0]}\n")
@@ -164,17 +116,13 @@ def generarInforme(listaExperimentos):
             archivo.write(f"Tipos de experimento: {experimento[2]}\n")
             archivo.write(f"resultados del experimento: {experimento[3]}\n")
             archivo.write("\n")
-
-
     print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt")            
-    
 
-#muestra el menu principal del programa
-#mejorar el menu 1
-#mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
 
 def mostrarMenu():
-
+    #muestra el menu principal del programa
+    #mejorar el menu 1
+    #mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
     while True:
         print("=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====")     
         print("=========Menu Principal====Gestion de experimento=========")       
@@ -189,7 +137,6 @@ def mostrarMenu():
         print("7. salir\n")  #actualizacon 26/11/2024
     ##prueba
         opcion = int(input("seleccione una opcion: "))
-
         if opcion == 1:
             agregarExperimento(listaExperimentos)
         elif opcion == 2:
@@ -202,22 +149,17 @@ def mostrarMenu():
             compararExperimento(listaExperimentos)
         elif opcion == 6:
             generarInforme(listaExperimentos)
-
             calcularEstadisticas(listaExperimentos)
         elif opcion == 5:
             compararExperimento(listaExperimentos)
         elif opcion == 6:
             generarInforme(listaExperimentos)
-
         elif opcion == 7:
             print("has salido del programas. ")
             break
         else:
-            print("\n¡Opción no valida!. \n ")           
-#funcion principal controla el flujo general del sistema
-#def main():    
-#conrola el flujo
-
+            print("\n¡Opción no valida!. \n ")   
+                  
 if __name__ == "__main__":
     mostrarMenu()
 
