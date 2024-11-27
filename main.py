@@ -63,15 +63,10 @@ def eliminarExperimento(listaExperimentos):
             listaExperimentos.pop(indiceExperimento) 
             print(visualizarExperimentos(listaExperimentos))
 
-
-
         except ValueError:
             print("no existe experimento")
-            return
-        
-
-        
-        
+            return    
+         
 #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
 ## analisis de resultados
 def calcularEstadisticas(listaExperimentos):
@@ -102,7 +97,8 @@ def calcularEstadisticas(listaExperimentos):
 def compararExperimento(listaExperimentos):
     if not listaExperimentos:
         print("no hay experimentos agregados")
-        pass
+
+pass
 
     ##visualizarExperimentos()
 
@@ -120,7 +116,6 @@ def compararExperimento(listaExperimentos):
     #for index, promedio in resultados_comparacion:
     #    print(f"{index +1}.{listaExperimentos[index][0]} - {promedio}") 
         
-
 
     #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
     #parar comparar requiere de visualizar los experimentos
