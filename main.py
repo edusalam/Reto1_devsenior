@@ -93,7 +93,9 @@ def compararExperimento(listaExperimentos):
     indices = list(map(int, input("ingrese los indices de los experimentos que desesa comparar separados  por comas: ").split(",")))
     resultados_comparacion = []
     for index in indices:
-        if(0 <= index < len(listaExperimentos)):
+       # apoyo = indices -1
+        #print(apoyo)
+        if(1 <= index <= len(listaExperimentos)):
             promedio = sum(listaExperimentos[index - 1][3]) / len(listaExperimentos[index-1 ][3])
             resultados_comparacion.append((index,promedio))
     else:
