@@ -94,14 +94,14 @@ def compararExperimento(listaExperimentos):
     resultados_comparacion = []
     for index in indices:
         if(0 <= index < len(listaExperimentos)):
-            promedio = sum(listaExperimentos[index][3]) / len(listaExperimentos[index][3])
-            resultados_comparacion.append(promedio)
+            promedio = sum(listaExperimentos[index - 1][3]) / len(listaExperimentos[index-1 ][3])
+            resultados_comparacion.append((index,promedio))
     else:
         print(f"indice {index} invalido")
         resultados_comparacion.sort(key=lambda x: x[1])
         print("resultados comparados")
     for index, promedio in resultados_comparacion:
-        print(f"{index +1}.{listaExperimentos[index][0]} - {promedio}")   
+        print(f"{index}.{listaExperimentos[index-1][0]} - {promedio:.2f}")   
     pass
 
 def generarInforme(listaExperimentos):
