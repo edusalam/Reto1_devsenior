@@ -2,7 +2,7 @@
 from datetime import datetime
 import statistics
 
-listaExperimentos = [["experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44]],]
+listaExperimentos = []
 
 class Experimento:
 
@@ -83,18 +83,14 @@ def calcularEstadisticas(listaExperimentos):
 
 
 def compararExperimento(listaExperimentos):
-     #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
-    #parar comparar requiere de visualizar los experimentos
-    #pass
-     #if not listaExperimentos:
-     #    print("no hay experimentos agregados")
-    #return   
+    #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
+    if not listaExperimentos:
+        print("no hay experimentos agregados")
+        return   
     visualizarExperimentos(listaExperimentos)
     indices = list(map(int, input("ingrese los indices de los experimentos que desesa comparar separados  por comas: ").split(",")))
     resultados_comparacion = []
     for index in indices:
-       # apoyo = indices -1
-        #print(apoyo)
         if(1 <= index <= len(listaExperimentos)):
             promedio = sum(listaExperimentos[index - 1][3]) / len(listaExperimentos[index-1 ][3])
             resultados_comparacion.append((index,promedio))
@@ -120,9 +116,7 @@ def generarInforme(listaExperimentos):
     print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt")            
 
 def mostrarMenu():
-    #muestra el menu principal del programa
-    #mejorar el menu 1
-    #mejorar el informe por que re  quiere el uso de ufnciones y calcular para su uso
+
     while True:
         print("\x1b[1;35m"+"=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====") 
         print("\x1b[1;35m"+"1."+ "\x1b[1;37m "+"Agregar experimento")  
@@ -135,8 +129,8 @@ def mostrarMenu():
         print("\x1b[1;35m"+"6."+ "\x1b[1;37m "+"Generar informe") 
         print("\x1b[1;35m"+"7."+ "\x1b[1;37m "+"Salir")  
 
-        opcion = int(input("\x1b[1;34m"+"Seleccione un opcion:"))
-         
+        opcion = int(input("Seleccione un opcion:"))
+        
         print()
         if opcion == 1:
             agregarExperimento(listaExperimentos)

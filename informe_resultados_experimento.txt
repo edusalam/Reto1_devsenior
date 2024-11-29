@@ -1,0 +1,5 @@
+Nombre: experimento 1
+Fecha de realizacion: 16/11/2024
+Tipos de experimento: quimica
+resultados del experimento: [5, 3, 4, 5, 6, 44]
+
