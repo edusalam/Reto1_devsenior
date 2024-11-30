@@ -1,9 +1,11 @@
-
+##librerias importadas
 from datetime import datetime
 import statistics
 
+##lista para almacenar los datos ingresados por el usuario
 listaExperimentos = []
 
+##clase creada para el programa 
 class Experimento:
 
     #metodo constructor 
@@ -13,8 +15,8 @@ class Experimento:
         self.tipoExperimento = tipoExperimento
         self.resultadosExperimento = resultadosExperimento
 
+##funsion que permite que el usuario agrege experimentos
 def agregarExperimento(listaExperimentos):
-    # funcion agregar experimento 
     nombreExperimento = input('\npor favor ingrese el nombre del experimento :  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
@@ -26,14 +28,14 @@ def agregarExperimento(listaExperimentos):
         print("fecha no valida.")
         return  
     tipoExperimento = input('ingrese el tipo de experimento que desea agregar(Qumica, fisica o biologia): ')  
-    resultadosExperimento = list(map(float,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))              
-    #experimento = Experimento([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
+    resultadosExperimento = list(map(float,input('ingrese los resultados obtenidos del experimento, separando cada resultado con coma (,):').split(",")))
     listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     print("\x1b[1;32m"+"Experimento agregado con exito....")
     print() 
 
-def visualizarExperimentos(listaExperimentos):
-    ## funsion para ver todos los experimentos agregados
+
+## funsion para ver todos los experimentos agregados    
+def visualizarExperimentos(listaExperimentos):    
     print("\x1b[1;35m"+"Lista de experimento")
     print("\x1b[1;37m") 
     if not listaExperimentos:
@@ -42,8 +44,8 @@ def visualizarExperimentos(listaExperimentos):
     for i, experimento in enumerate(listaExperimentos):
         print(f"{i + 1}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} \n")
 
+##funsion que permite al usuario eliminar un experimento
 def eliminarExperimento(listaExperimentos):
-    #permite eliminar un experimento
     if not listaExperimentos:
         print("\x1b[1;31m"+"No hay experimentos agregados") 
         return    
@@ -57,9 +59,8 @@ def eliminarExperimento(listaExperimentos):
             print("no existe experimento")
             return          
 
+##funsion la cual calcula los datos de uno de los experimentos agregados
 def calcularEstadisticas(listaExperimentos):
-    #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
-    # analisis de resultados
     if not listaExperimentos:
         print("\x1b[1;31m"+"No hay experimentos agregados") 
         return
@@ -81,9 +82,8 @@ def calcularEstadisticas(listaExperimentos):
     else:
         print("obcion invalida..")    
 
-
+##funsion que permite comparar los datos de dos o mas experimentos agregados 
 def compararExperimento(listaExperimentos):
-    #compara 2 o mas experimentos para determinar los mejores o peores resultados, requiere el uso de calcular estadistica dificula 2
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return   
@@ -102,6 +102,7 @@ def compararExperimento(listaExperimentos):
         print(f"{index}.{listaExperimentos[index-1][0]} - {promedio:.2f}")   
     pass
 
+##funsion que permite al usuario generar un informe(.txt) con todos los datos y experimentos agregados 
 def generarInforme(listaExperimentos):
     if not listaExperimentos:
         print("\x1b[1;31m"+"No hay experimentos agregados") 
@@ -114,7 +115,7 @@ def generarInforme(listaExperimentos):
             archivo.write(f"resultados del experimento: {experimento[3]}\n")
             archivo.write("\n")
     print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt")            
-
+##funsion menu
 def mostrarMenu():
 
     while True:
@@ -131,7 +132,6 @@ def mostrarMenu():
 
         opcion = int(input("Seleccione un opcion:"))
         
-        print()
         if opcion == 1:
             agregarExperimento(listaExperimentos)
         elif opcion == 2:
@@ -139,11 +139,6 @@ def mostrarMenu():
         elif opcion == 3:
             eliminarExperimento(listaExperimentos)
         elif opcion == 4:
-            calcularEstadisticas(listaExperimentos)
-        elif opcion == 5:
-            compararExperimento(listaExperimentos)
-        elif opcion == 6:
-            generarInforme(listaExperimentos)
             calcularEstadisticas(listaExperimentos)
         elif opcion == 5:
             compararExperimento(listaExperimentos)

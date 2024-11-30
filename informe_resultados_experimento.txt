@@ -1,5 +1,5 @@
-Nombre: experimento 1
-Fecha de realizacion: 16/11/2024
-Tipos de experimento: quimica
-resultados del experimento: [5, 3, 4, 5, 6, 44]
+Nombre: experimento
+Fecha de realizacion: 2024-11-20 00:00:00
+Tipos de experimento: fisica
+resultados del experimento: [22.0, 33.0]
 
