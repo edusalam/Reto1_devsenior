@@ -1,5 +1,0 @@
-Nombre: experimento
-Fecha de realizacion: 2024-11-20 00:00:00
-Tipos de experimento: fisica
-resultados del experimento: [22.0, 33.0]
-

@@ -152,10 +152,3 @@ def mostrarMenu():
             
 if __name__ == "__main__":
     mostrarMenu()
-
-
-
-    
-
-
-
