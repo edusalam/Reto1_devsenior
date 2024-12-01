@@ -1,4 +1,4 @@
-##librerias importadas
+#librerias importadas
 from datetime import datetime
 import statistics
 #Rama1 actuaizada 1/12/2024
@@ -121,16 +121,17 @@ def generarInforme(listaExperimentos):
 def mostrarMenu():
     ##funsion menu
     while True:
-        print("\x1b[1;35m"+"=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====") 
+        print("\x1b[1;35m"+"   =====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====") 
         print("\x1b[1;35m"+"1."+ "\x1b[1;37m "+"Agregar experimento")  
         print("\x1b[1;35m"+"2."+ "\x1b[1;37m "+"Visualizar experimento") 
         print("\x1b[1;35m"+"3."+ "\x1b[1;37m "+"Eliminar experimento") 
-        print("\x1b[1;35m"+"    ===   ===Analisis de datos===   ===   ") 
+        print("\x1b[1;35m"+"      ====Analisis de datos====      ") 
         print("\x1b[1;35m"+"4."+ "\x1b[1;37m "+"Calcular estadisticas")
         print("\x1b[1;35m"+"5."+ "\x1b[1;37m "+"Comparar experimento") 
-        print("\x1b[1;35m"+"== == == Informes == == ==")
+        print("\x1b[1;35m"+"       ===Informes=== ")
         print("\x1b[1;35m"+"6."+ "\x1b[1;37m "+"Generar informe") 
         print("\x1b[1;35m"+"7."+ "\x1b[1;37m "+"Salir") 
+        print("-------------------------------------------------") 
 
         opcion = int(input("Seleccione un opcion:"))
         if opcion == 1:
