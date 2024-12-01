@@ -5,7 +5,7 @@ import statistics
 #lista para almacenar los datos ingresados por el usuario
 listaExperimentos = []
 
-##clase creada para el programa 
+#clase creada para el programa 
 class Experimento:
 
     #metodo constructor 
