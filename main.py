@@ -15,7 +15,6 @@ class Experimento:
         self.tipoExperimento = tipoExperimento
         self.resultadosExperimento = resultadosExperimento
 
-
 def agregarExperimento(listaExperimentos):
     #funsion que permite que el usuario agrege experimentos
     nombreExperimento = input('\npor favor ingrese el nombre del experimento :  ')
@@ -33,8 +32,6 @@ def agregarExperimento(listaExperimentos):
     listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     print("\x1b[1;32m"+"Experimento agregado con exito....")
     print() 
-
-
   
 def visualizarExperimentos(listaExperimentos):   
     #funsion para ver todos los experimentos agregados   
@@ -45,7 +42,6 @@ def visualizarExperimentos(listaExperimentos):
         return            
     for i, experimento in enumerate(listaExperimentos):
         print(f"{i + 1}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} \n")
-
 
 def eliminarExperimento(listaExperimentos):
     #funsion que permite al usuario eliminar un experimento
@@ -60,8 +56,7 @@ def eliminarExperimento(listaExperimentos):
             print(visualizarExperimentos(listaExperimentos))
         except ValueError:
             print("no existe experimento")
-            return          
-
+            return        
 
 def calcularEstadisticas(listaExperimentos):
     #funsion la cual calcula los datos de uno de los experimentos agregados
@@ -86,7 +81,6 @@ def calcularEstadisticas(listaExperimentos):
     else:
         print("obcion invalida..")    
 
-
 def compararExperimento(listaExperimentos):
     #funsion que permite comparar los datos de dos o mas experimentos agregados 
     if not listaExperimentos:
@@ -106,7 +100,6 @@ def compararExperimento(listaExperimentos):
     for index, promedio in resultados_comparacion:
         print(f"{index}.{listaExperimentos[index-1][0]} - {promedio:.2f}")   
     pass
-
 
 def generarInforme(listaExperimentos):
     #funsion que permite al usuario generar un informe(.txt) con todos los datos y experimentos agregados 
