@@ -15,8 +15,9 @@ class Experimento:
         self.tipoExperimento = tipoExperimento
         self.resultadosExperimento = resultadosExperimento
 
-##funsion que permite que el usuario agrege experimentos
+
 def agregarExperimento(listaExperimentos):
+    #funsion que permite que el usuario agrege experimentos
     nombreExperimento = input('\npor favor ingrese el nombre del experimento :  ')
     fechaDeRealizacion = input('ingresar la fecha de realizacion del proyecto (DD/MM/YYYY): ')
     try:
@@ -34,8 +35,9 @@ def agregarExperimento(listaExperimentos):
     print() 
 
 
-## funsion para ver todos los experimentos agregados    
-def visualizarExperimentos(listaExperimentos):    
+  
+def visualizarExperimentos(listaExperimentos):   
+    #funsion para ver todos los experimentos agregados   
     print("\x1b[1;35m"+"Lista de experimento")
     print("\x1b[1;37m") 
     if not listaExperimentos:
@@ -44,8 +46,9 @@ def visualizarExperimentos(listaExperimentos):
     for i, experimento in enumerate(listaExperimentos):
         print(f"{i + 1}.{experimento[0]} - {experimento[1]} - {experimento[2]} - {experimento[3]} \n")
 
-##funsion que permite al usuario eliminar un experimento
+
 def eliminarExperimento(listaExperimentos):
+    #funsion que permite al usuario eliminar un experimento
     if not listaExperimentos:
         print("\x1b[1;31m"+"No hay experimentos agregados") 
         return    
@@ -59,8 +62,9 @@ def eliminarExperimento(listaExperimentos):
             print("no existe experimento")
             return          
 
-##funsion la cual calcula los datos de uno de los experimentos agregados
+
 def calcularEstadisticas(listaExperimentos):
+    #funsion la cual calcula los datos de uno de los experimentos agregados
     if not listaExperimentos:
         print("\x1b[1;31m"+"No hay experimentos agregados") 
         return
