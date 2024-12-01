@@ -82,8 +82,9 @@ def calcularEstadisticas(listaExperimentos):
     else:
         print("obcion invalida..")    
 
-##funsion que permite comparar los datos de dos o mas experimentos agregados 
+
 def compararExperimento(listaExperimentos):
+    #funsion que permite comparar los datos de dos o mas experimentos agregados 
     if not listaExperimentos:
         print("no hay experimentos agregados")
         return   
@@ -102,8 +103,9 @@ def compararExperimento(listaExperimentos):
         print(f"{index}.{listaExperimentos[index-1][0]} - {promedio:.2f}")   
     pass
 
-##funsion que permite al usuario generar un informe(.txt) con todos los datos y experimentos agregados 
+
 def generarInforme(listaExperimentos):
+    #funsion que permite al usuario generar un informe(.txt) con todos los datos y experimentos agregados 
     if not listaExperimentos:
         print("\x1b[1;31m"+"No hay experimentos agregados") 
         return
@@ -115,9 +117,9 @@ def generarInforme(listaExperimentos):
             archivo.write(f"resultados del experimento: {experimento[3]}\n")
             archivo.write("\n")
     print("el informe solicitado con los analizis se a generado correctamente como 'informe_resultados_experimento.txt")            
-##funsion menu
-def mostrarMenu():
 
+def mostrarMenu():
+    ##funsion menu
     while True:
         print("\x1b[1;35m"+"=====MENU PRINCIPAL==GESTION DE EXPERIMENTO=====") 
         print("\x1b[1;35m"+"1."+ "\x1b[1;37m "+"Agregar experimento")  
@@ -128,10 +130,9 @@ def mostrarMenu():
         print("\x1b[1;35m"+"5."+ "\x1b[1;37m "+"Comparar experimento") 
         print("\x1b[1;35m"+"== == == Informes == == ==")
         print("\x1b[1;35m"+"6."+ "\x1b[1;37m "+"Generar informe") 
-        print("\x1b[1;35m"+"7."+ "\x1b[1;37m "+"Salir")  
+        print("\x1b[1;35m"+"7."+ "\x1b[1;37m "+"Salir") 
 
         opcion = int(input("Seleccione un opcion:"))
-        
         if opcion == 1:
             agregarExperimento(listaExperimentos)
         elif opcion == 2:

@@ -1,5 +1,10 @@
 Nombre: f
-Fecha de realizacion: 2024-11-24 00:00:00
+Fecha de realizacion: 2024-11-16 00:00:00
 Tipos de experimento: f
-resultados del experimento: [6.0, 4.0]
+resultados del experimento: [2.0, 3.0]
+
+Nombre: q
+Fecha de realizacion: 2024-11-24 00:00:00
+Tipos de experimento: w
+resultados del experimento: [4.0, 5.0]
 
