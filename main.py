@@ -32,7 +32,7 @@ def agregarExperimento(listaExperimentos):
     listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     print("\x1b[1;32m"+"Experimento agregado con exito....")
     print() 
-  
+
 def visualizarExperimentos(listaExperimentos):   
     #funsion para ver todos los experimentos agregados   
     print("\x1b[1;35m"+"Lista de experimento")
