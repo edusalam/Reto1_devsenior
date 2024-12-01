@@ -1,7 +1,7 @@
 #librerias importadas
 from datetime import datetime
 import statistics
-#Rama1 actuaizada 1/12/2024
+#Codigo actualizado primero de diciembre del 2024
 #lista para almacenar los datos ingresados por el usuario
 listaExperimentos = []
 
