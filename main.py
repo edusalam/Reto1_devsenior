@@ -1,29 +1,7 @@
-<<<<<<< HEAD
-##print("hola")        INVESTIGAR LA MAQUETACION
-#estructurar para que haya un buen funcionamiento
-#visualizacin print consola
-#atributos
-#atributos de un experimento: nombre, fecha, tipo de resultados
-LISTADeExperimentos = [
-    "experimento 1", "16/11/2024", "quimica", [5,3,4,5,6,44],
-]
-import datatime
-def agregarExperimento(): 
-    #funcion permite un nuevo experimento con sus atributos
-    pass
-#permite eliminar un experimento,    
-def eliminarExperimento():
- pass
-def visualizarExperimento():
-    #permite visualizar todos los experimentos, requiere el uso de la funcion agregarr experimento dificulatas 1 
-    pass
- #calcular estadisticasbasicas, promedio maximos y minimos de un experimento, requiere el uso de funcion agrear experimento prioridad 2
-def calcularEstadistica():
-=======
 #librerias importadas
 from datetime import datetime
 import statistics
-#Codigo actualizado primero de diciembre del 2024
+#Rama1 actuaizada 1/12/2024
 #lista para almacenar los datos ingresados por el usuario
 listaExperimentos = []
 
@@ -54,7 +32,7 @@ def agregarExperimento(listaExperimentos):
     listaExperimentos.append([nombreExperimento, fechaDeRealizacion, tipoExperimento, resultadosExperimento])
     print("\x1b[1;32m"+"Experimento agregado con exito....")
     print() 
-
+  
 def visualizarExperimentos(listaExperimentos):   
     #funsion para ver todos los experimentos agregados   
     print("\x1b[1;35m"+"Lista de experimento")
@@ -121,7 +99,6 @@ def compararExperimento(listaExperimentos):
         print("resultados comparados")
     for index, promedio in resultados_comparacion:
         print(f"{index}.{listaExperimentos[index-1][0]} - {promedio:.2f}")   
->>>>>>> dcbef17bc5941104b5e58bba32057aa7ce07e3f8
     pass
 
 def generarInforme(listaExperimentos):
@@ -174,4 +151,5 @@ def mostrarMenu():
             
 if __name__ == "__main__":
     mostrarMenu()
+
 
